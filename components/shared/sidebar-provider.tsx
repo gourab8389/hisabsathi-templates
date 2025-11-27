@@ -4,15 +4,10 @@ import { useState } from "react";
 import { AppSidebar } from "@/components/shared/app-sidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import templates from "@/app/constants/template";
+import { TemplateProvider, useTemplate } from "./template-context";
 
-interface SidebarProviderComponentProps {
-  children?: React.ReactNode;
-}
-
-export default function SidebarProviderComponent({
-  children,
-}: SidebarProviderComponentProps) {
-  const [activeTemplate, setActiveTemplate] = useState(templates[0].id);
+function SidebarContent({ children }: { children: React.ReactNode }) {
+  const { activeTemplate, setActiveTemplate } = useTemplate();
 
   return (
     <SidebarProvider>
@@ -28,5 +23,17 @@ export default function SidebarProviderComponent({
         <main className="flex-1 p-6">{children}</main>
       </div>
     </SidebarProvider>
+  );
+}
+
+export default function SidebarProviderComponent({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <TemplateProvider>
+      <SidebarContent>{children}</SidebarContent>
+    </TemplateProvider>
   );
 }
