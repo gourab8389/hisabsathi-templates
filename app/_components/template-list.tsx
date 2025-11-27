@@ -1,4 +1,5 @@
 import CashInvoiceTemplate from "./cash-invoice-template";
+import TaxInvoiceTemplate from "./tax-invoice-template";
 
 const templates = [
   {
@@ -9,7 +10,7 @@ const templates = [
   {
     id: "template2",
     name: "Tax Invoice Template",
-    content: "This is the content of Template 2.",
+    content: <TaxInvoiceTemplate />,
   },
   {
     id: "template3",

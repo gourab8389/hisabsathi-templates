@@ -77,9 +77,9 @@ const CashInvoiceTemplate = () => {
   };
 
   return (
-    <div className='border border-gray-300 w-full max-w-[210mm] mx-auto bg-white p-5 text-xs' style={{ minHeight: '297mm' }}>
+    <div className='border border-gray-300 w-full max-w-[210mm] mx-auto bg-white p-8 text-xs' style={{ minHeight: '297mm' }}>
       {/* Header */}
-      <div className='flex justify-between items-start mb-6'>
+      <div className='flex justify-between items-start mb-5'>
         <div>
           <h1 className='text-lg font-semibold mb-2'>{invoiceData.businessDetails.name}</h1>
           <p className='text-xs'><span className='font-semibold'>GSTIN :</span> {invoiceData.businessDetails.gstin}</p>
@@ -95,7 +95,7 @@ const CashInvoiceTemplate = () => {
       </div>
 
       {/* Bill To and Invoice Details */}
-      <div className='flex justify-between mb-6'>
+      <div className='flex justify-between mb-5'>
         <div className='w-1/2'>
           <p className='text-xs font-semibold mb-2'>Bill To:</p>
           <p className='text-xs font-semibold'>{invoiceData.billTo.name}</p>
@@ -114,7 +114,7 @@ const CashInvoiceTemplate = () => {
       </div>
 
       {/* Items Table */}
-      <table className='w-full border-collapse mb-6'>
+      <table className='w-full border-collapse mb-5'>
         <thead>
           <tr className='border-t border-b border-gray-800'>
             <th className='text-left text-xs font-semibold py-2 px-1'>#</th>
@@ -138,7 +138,7 @@ const CashInvoiceTemplate = () => {
       </table>
 
       {/* Bank Details and Payment Summary */}
-      <div className='flex justify-between gap-8 mb-6'>
+      <div className='flex justify-between gap-8 mb-5'>
         <div className='w-1/2'>
           <p className='text-xs font-semibold mb-2'>Bank Details:</p>
           <p className='text-xs'><span className='font-semibold'>Bank:</span> {invoiceData.bankDetails.bank}</p>
@@ -198,12 +198,12 @@ const CashInvoiceTemplate = () => {
       </div>
 
       {/* Amount in Words */}
-      <div className='mb-6'>
+      <div className='mb-5'>
         <p className='text-xs'><span className='font-semibold'>Total amount (in words) :</span> {invoiceData.amountInWords}</p>
       </div>
 
       {/* Notes */}
-      <div className='mb-6'>
+      <div className='mb-5'>
         <p className='text-xs font-semibold mb-2'>Notes:</p>
         <p className='text-xs'>Thank you for the Business!</p>
       </div>
@@ -211,7 +211,7 @@ const CashInvoiceTemplate = () => {
       {/* Terms and Conditions */}
       <div className='mb-8'>
         <p className='text-xs font-semibold mb-2'>Terms and Conditions:</p>
-        <ol className='text-xs space-y-1 pl-4'>
+        <ol className='text-xs space-y-0.5 pl-4'>
           <li>1. All invoices are payable within 15 days from the date of invoice.</li>
           <li>2. Late payments penalty of 2.5% interest per day on the outstanding balance.</li>
           <li>3. Any additional services requested by the client shall be subject to additional fees.</li>
