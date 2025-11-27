@@ -1,17 +1,15 @@
 import {
   Sidebar,
   SidebarContent,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import { Book, FileText } from "lucide-react";
+import { JSX } from "react";
 
 interface AppSidebarProps {
-  templates: Array<{ id: string; name: string; content: string }>;
+  templates: Array<{ id: string; name: string; content: string | JSX.Element }>;
   activeTemplate: string;
   onTemplateSelect: (id: string) => void;
 }
