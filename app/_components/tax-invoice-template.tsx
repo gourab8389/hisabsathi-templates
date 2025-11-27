@@ -49,11 +49,11 @@ const TaxInvoiceTemplate = () => {
 
   return (
     <div
-      className="w-full border border-gray-300 max-w-[210mm] mx-auto bg-white p-8 text-xs flex flex-col gap-5"
+      className="w-full max-w-[210mm] mx-auto bg-white p-8 text-xs flex flex-col"
       style={{ minHeight: "297mm" }}
     >
       {/* Header Section */}
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-start mb-4">
         {/* Left Side - Business Details */}
         <div>
           <h1 className="text-lg font-bold mb-3">
@@ -92,7 +92,7 @@ const TaxInvoiceTemplate = () => {
       </div>
 
       {/* Bill To and Invoice Details Row */}
-      <div className="flex justify-between">
+      <div className="flex justify-between mb-4">
         {/* Left Side - Bill To */}
         <div className="w-[48%]">
           <p className="text-xs font-semibold mb-2">Bill To:</p>
@@ -143,7 +143,7 @@ const TaxInvoiceTemplate = () => {
       </div>
 
       {/* Tax Summary Section */}
-      <div>
+      <div className="mb-4">
         <div className="flex justify-between mb-1">
           <span className="text-xs font-semibold">Taxable Amount</span>
           <span className="text-xs font-semibold">
@@ -206,7 +206,7 @@ const TaxInvoiceTemplate = () => {
       </div>
 
       {/* Bank Details and QR Code Row */}
-      <div className="flex justify-between">
+      <div className="flex justify-between mb-4">
         {/* Left Side - Bank Details */}
         <div className="w-[48%]">
           <p className="text-xs font-semibold mb-2">Bank Details:</p>
@@ -243,7 +243,7 @@ const TaxInvoiceTemplate = () => {
       </div>
 
       {/* Amount in Words */}
-      <div>
+      <div className="mb-4">
         <p className="text-xs">
           <span className="font-semibold">Total amount (in words) : </span>
           {invoiceData.amountInWords}
@@ -251,13 +251,13 @@ const TaxInvoiceTemplate = () => {
       </div>
 
       {/* Notes Section */}
-      <div>
+      <div className="mb-3">
         <p className="text-xs font-semibold mb-2">Notes:</p>
         <p className="text-xs">Thank you for the Business!</p>
       </div>
 
       {/* Terms and Conditions */}
-      <div>
+      <div className="mb-4">
         <p className="text-xs font-semibold mb-2">Terms and Conditions:</p>
         <div className="text-xs space-y-0.5">
           <p>

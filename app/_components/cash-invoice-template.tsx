@@ -77,7 +77,7 @@ const CashInvoiceTemplate = () => {
   };
 
   return (
-    <div className='border border-gray-300 w-full max-w-[210mm] mx-auto bg-white p-8 text-xs' style={{ minHeight: '297mm' }}>
+    <div className='w-full max-w-[210mm] mx-auto bg-white p-8 text-xs' style={{ minHeight: '297mm' }}>
       {/* Header */}
       <div className='flex justify-between items-start mb-5'>
         <div>
@@ -141,7 +141,6 @@ const CashInvoiceTemplate = () => {
       <div className='flex justify-between gap-8 mb-5'>
         <div className='w-1/2'>
           <p className='text-xs font-semibold mb-2'>Bank Details:</p>
-          <p className='text-xs'><span className='font-semibold'>Bank:</span> {invoiceData.bankDetails.bank}</p>
           <p className='text-xs'><span className='font-semibold'>Bank:</span> {invoiceData.bankDetails.bank}</p>
           <p className='text-xs'><span className='font-semibold'>Account #:</span> {invoiceData.bankDetails.accountNumber}</p>
           <p className='text-xs'><span className='font-semibold'>IFSC:</span> {invoiceData.bankDetails.ifsc}</p>
@@ -209,7 +208,7 @@ const CashInvoiceTemplate = () => {
       </div>
 
       {/* Terms and Conditions */}
-      <div className='mb-8'>
+      <div className='mb-5'>
         <p className='text-xs font-semibold mb-2'>Terms and Conditions:</p>
         <ol className='text-xs space-y-0.5 pl-4'>
           <li>1. All invoices are payable within 15 days from the date of invoice.</li>
