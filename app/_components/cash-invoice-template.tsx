@@ -105,7 +105,7 @@ const CashInvoiceTemplate = () => {
           <p className='text-xs'><span className='font-semibold'>Mobile :</span> {invoiceData.billTo.mobile}</p>
           <p className='text-xs'><span className='font-semibold'>Email :</span> {invoiceData.billTo.email}</p>
         </div>
-        <div className='w-1/2'>
+        <div className='w-1/2 pl-16'>
           <p className='text-xs flex justify-between'><span className='font-semibold'>Invoice Date:</span> {invoiceData.invoiceInfo.invoiceDate}</p>
           <p className='text-xs flex justify-between'><span className='font-semibold'>Invoice Period:</span> {invoiceData.invoiceInfo.invoicePeriod}</p>
           <p className='text-xs flex justify-between'><span className='font-semibold'>Due Date:</span> {invoiceData.invoiceInfo.dueDate}</p>
@@ -210,7 +210,7 @@ const CashInvoiceTemplate = () => {
       {/* Terms and Conditions */}
       <div className='mb-5'>
         <p className='text-xs font-semibold mb-2'>Terms and Conditions:</p>
-        <ol className='text-xs space-y-0.5 pl-4'>
+        <ol className='text-xs space-y-0.5'>
           <li>1. All invoices are payable within 15 days from the date of invoice.</li>
           <li>2. Late payments penalty of 2.5% interest per day on the outstanding balance.</li>
           <li>3. Any additional services requested by the client shall be subject to additional fees.</li>
