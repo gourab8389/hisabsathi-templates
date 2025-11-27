@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState } from "react";
-import templates from "@/app/constants/template";
+import templates from "@/app/_components/template-list";
 
 const TemplateContext = createContext<{
   activeTemplate: string;

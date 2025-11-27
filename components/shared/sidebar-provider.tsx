@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AppSidebar } from "@/components/shared/app-sidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import templates from "@/app/constants/template";
+import templates from "@/app/_components/template-list";
 import { TemplateProvider, useTemplate } from "./template-context";
 
 function SidebarContent({ children }: { children: React.ReactNode }) {

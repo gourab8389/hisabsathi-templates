@@ -1,0 +1,26 @@
+import CashInvoiceTemplate from "./cash-invoice-template";
+
+const templates = [
+  {
+    id: "template1",
+    name: "Cash Invoice Template",
+    content: <CashInvoiceTemplate />,
+  },
+  {
+    id: "template2",
+    name: "Tax Invoice Template",
+    content: "This is the content of Template 2.",
+  },
+  {
+    id: "template3",
+    name: "Annexure Tax Invoice Template(V1)",
+    content: "This is the content of Template 3.",
+  },
+  {
+    id: "template4",
+    name: "Annexure Tax Invoice Template(V2)",
+    content: "This is the content of Template 4.",
+  },
+];
+
+export default templates;
