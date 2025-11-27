@@ -115,7 +115,7 @@ const TaxInvoiceTemplate = () => {
         </div>
 
         {/* Right Side - Invoice Details */}
-        <div className="border border-gray-300 w-[48%] pl-16">
+        <div className="border border-gray-300 w-[48%] pl-24">
           <div className="border border-gray-300 flex justify-between mb-1">
             <span className="text-xs font-semibold">Invoice Date:</span>
             <span className="text-xs">

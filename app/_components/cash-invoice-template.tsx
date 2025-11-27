@@ -105,7 +105,7 @@ const CashInvoiceTemplate = () => {
           <p className='text-xs'><span className='font-semibold'>Mobile :</span> {invoiceData.billTo.mobile}</p>
           <p className='text-xs'><span className='font-semibold'>Email :</span> {invoiceData.billTo.email}</p>
         </div>
-        <div className='w-1/2 pl-16'>
+        <div className='w-1/2 pl-24'>
           <p className='text-xs flex justify-between'><span className='font-semibold'>Invoice Date:</span> {invoiceData.invoiceInfo.invoiceDate}</p>
           <p className='text-xs flex justify-between'><span className='font-semibold'>Invoice Period:</span> {invoiceData.invoiceInfo.invoicePeriod}</p>
           <p className='text-xs flex justify-between'><span className='font-semibold'>Due Date:</span> {invoiceData.invoiceInfo.dueDate}</p>
