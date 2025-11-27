@@ -299,7 +299,7 @@ const TaxInvoiceTemplate = () => {
       </div>
 
       {/* Signature Section */}
-      <div className="border-t border-black pt-1 mt-8">
+      <div className="border-t border-black pt-1 mt-6">
         <p className="text-xs">Receiver's Signature</p>
       </div>
     </div>
