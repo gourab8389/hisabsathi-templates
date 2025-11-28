@@ -30,7 +30,7 @@ export default function Template() {
   return (
     <div className="flex min-h-screen w-full border border-dashed border-gray-300">
       {currentTemplate && (
-        <div className="p-5 w-full">
+        <div className="md:py-5 md:px-20 w-full">
           <div className="flex justify-between">
             <h1 className="text-xl font-bold mb-4">{currentTemplate.name}</h1>
             <Button onClick={handlePrint}>Download PDF</Button>
