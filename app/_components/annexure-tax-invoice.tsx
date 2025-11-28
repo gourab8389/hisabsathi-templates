@@ -1,6 +1,6 @@
 import QRCode from "react-qr-code";
 
-const CashInvoiceTemplate = () => {
+const AnnexureTaxInvoice = () => {
   const invoiceData = {
     businessDetails: {
       name: "BUSINESS NAME",
@@ -29,31 +29,55 @@ const CashInvoiceTemplate = () => {
     items: [
       {
         id: 1,
-        item: "Documents",
-        rate: 100.0,
-        qty: 3,
-        amount: 300.0,
+        date: "01-03-2025",
+        awbNo: "340168490",
+        consignee: "aaa 124414",
+        dest: "PANJBPUR",
+        pcs: "734434",
+        weight: "10.25",
+        amount: 183.0,
+        fov: 10.0,
+        total: 193.0,
+        value: 45000.0,
       },
       {
         id: 2,
-        item: "T-shirts",
-        rate: 1000.25,
-        qty: 5,
-        amount: 5001.25,
+        date: "16-03-2025",
+        awbNo: "340168490",
+        consignee: "bbb 724165",
+        dest: "AAAA",
+        pcs: "781592",
+        weight: "10.25",
+        amount: 548.0,
+        fov: 10.0,
+        total: 548.0,
+        value: 45000.0,
       },
       {
         id: 3,
-        item: "Cargo Pants",
-        rate: 900.0,
-        qty: 8,
-        amount: 5600.0,
+        date: "25-03-2025",
+        awbNo: "340168490",
+        consignee: "aaa 774784",
+        dest: "HARIDAGHA",
+        pcs: "741222",
+        weight: "1",
+        amount: 193.0,
+        fov: 10.0,
+        total: 183.0,
+        value: 5000.0,
       },
       {
         id: 4,
-        item: "Cosmetics",
-        rate: 1500.0,
-        qty: 12,
-        amount: 18000.0,
+        date: "25-03-2025",
+        awbNo: "340168544",
+        consignee: "aaa 774872",
+        dest: "HARIDAGHA",
+        pcs: "741222",
+        weight: "0.5",
+        amount: 240.0,
+        fov: 10.0,
+        total: 240.0,
+        value: 5000.0,
       },
     ],
     bankDetails: {
@@ -75,7 +99,6 @@ const CashInvoiceTemplate = () => {
     },
     amountInWords: "Thirty nine thousand, three hundred six point seven zero",
   };
-
   return (
     <div
       className="w-full max-w-[210mm] mx-auto bg-white p-8 text-xs"
@@ -156,31 +179,82 @@ const CashInvoiceTemplate = () => {
       </div>
 
       {/* Items Table */}
-      <table className="w-full border-collapse mb-5">
+      <table
+        className="w-full mb-5"
+        style={{ borderSpacing: "2px", borderCollapse: "separate" }}
+      >
         <thead>
-          <tr className="border-t border-b border-gray-800">
-            <th className="text-left text-xs font-semibold py-2 px-1">#</th>
-            <th className="text-left text-xs font-semibold py-2 px-1">Item</th>
-            <th className="text-right text-xs font-semibold py-2 px-1">
-              Rate/Item
+          <tr>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              #
             </th>
-            <th className="text-right text-xs font-semibold py-2 px-1">Qty</th>
-            <th className="text-right text-xs font-semibold py-2 px-1">
-              Amount
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              DATE
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              AWB NO.
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              CONSIGNEE
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              DEST
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              PCS
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              WEIGHT
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              AMOUNT
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              FOV
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              TOTAL
+            </th>
+            <th className="text-left text-xs font-semibold py-2 px-2 border border-gray-800 bg-white">
+              VALUE
             </th>
           </tr>
         </thead>
         <tbody>
           {invoiceData.items.map((item) => (
-            <tr key={item.id} className="border-b border-gray-300">
-              <td className="text-xs py-2 px-1">{item.id}</td>
-              <td className="text-xs py-2 px-1">{item.item}</td>
-              <td className="text-right text-xs py-2 px-1">
-                {item.rate.toFixed(2)}
+            <tr key={item.id}>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.id}
               </td>
-              <td className="text-right text-xs py-2 px-1">{item.qty}</td>
-              <td className="text-right text-xs py-2 px-1">
-                {item.amount.toFixed(2)}
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.date}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.awbNo}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.consignee}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.dest}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.pcs}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                {item.weight}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                ₹ {item.amount.toFixed(2)}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                ₹ {item.fov.toFixed(2)}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                ₹ {item.total.toFixed(2)}
+              </td>
+              <td className="text-[11px] py-2 px-2 border border-gray-800 bg-white">
+                ₹ {item.value.toFixed(2)}
               </td>
             </tr>
           ))}
@@ -275,48 +349,6 @@ const CashInvoiceTemplate = () => {
         <p className="text-xs">Thank you for the Business!</p>
       </div>
 
-      {/* Terms and Conditions */}
-      <div className="mb-5">
-        <p className="text-xs font-semibold mb-2">Terms and Conditions:</p>
-        <ol className="text-xs space-y-0.5">
-          <li>
-            1. All invoices are payable within 15 days from the date of invoice.
-          </li>
-          <li>
-            2. Late payments penalty of 2.5% interest per day on the outstanding
-            balance.
-          </li>
-          <li>
-            3. Any additional services requested by the client shall be subject
-            to additional fees.
-          </li>
-          <li>
-            4. The client retains all rights to materials provided by them for
-            use in the project.
-          </li>
-          <li>
-            5. Both parties agree to keep all information exchanged during the
-            project confidential.
-          </li>
-          <li>
-            6. This includes, business strategies, trade secrets, & any
-            proprietary information.
-          </li>
-          <li>
-            7. Company reserves the right to update these terms and conditions
-            at any time.
-          </li>
-          <li>
-            8. This agreement shall be governed by and construed in accordance
-            with the laws.
-          </li>
-          <li>
-            9. By accepting this invoice, the client agrees to abide by these
-            terms and conditions.
-          </li>
-        </ol>
-      </div>
-
       {/* Signature */}
       <div className="border-t border-gray-800 pt-1 mt-6">
         <p className="text-xs">Receiver's Signature</p>
@@ -325,4 +357,4 @@ const CashInvoiceTemplate = () => {
   );
 };
 
-export default CashInvoiceTemplate;
+export default AnnexureTaxInvoice;

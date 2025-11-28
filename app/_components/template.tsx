@@ -32,7 +32,7 @@ export default function Template() {
       {currentTemplate && (
         <div className="p-5 w-full">
           <div className="flex justify-between">
-            <h1 className="text-3xl font-bold mb-4">{currentTemplate.name}</h1>
+            <h1 className="text-xl font-bold mb-4">{currentTemplate.name}</h1>
             <Button onClick={handlePrint}>Download PDF</Button>
           </div>
           <div className="border border-gray-200">

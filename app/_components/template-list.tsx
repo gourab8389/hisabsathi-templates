@@ -1,3 +1,4 @@
+import AnnexureTaxInvoice from "./annexure-tax-invoice";
 import CashInvoiceTemplate from "./cash-invoice-template";
 import TaxInvoiceTemplate from "./tax-invoice-template";
 
@@ -15,7 +16,7 @@ const templates = [
   {
     id: "template3",
     name: "Annexure Tax Invoice Template(V1)",
-    content: "This is the content of Template 3.",
+    content: <AnnexureTaxInvoice />,
   },
   {
     id: "template4",
